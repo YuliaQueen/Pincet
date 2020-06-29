@@ -1,0 +1,80 @@
+.container {
+  width: 80vw;
+  margin: 0 auto;
+}
+@font-face {
+  font-family: 'Appetite-New';
+  src: local('Appetite-New'), url('../fonts/Appetite_New.otf') format('otf');
+}
+@font-face {
+  font-family: 'MuseoSansCyrl-300';
+  src: local('MuseoSansCyrl-300'), url('../fonts/MUSEOSANSCYRL_1.OTF') format('otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'MuseoSansCyrl-500';
+  src: local('MuseoSansCyrl-500'), url('../fonts/MUSEOSANSCYRL_2.OTF') format('otf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'MuseoSansCyrl-700';
+  src: local('MuseoSansCyrl-700'), url('../fonts/MUSEOSANSCYRL_3.OTF') format('otf');
+  font-weight: 700;
+}
+.header {
+  height: 95vh;
+  background-color: bisque;
+  background-image: url("../images/wave.png"), url(../images/header-bg.png);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, top left 43%;
+  background-size: 110%;
+  padding-top: 2vh;
+}
+.header .header__top {
+  max-width: 80vw;
+  margin: 0 auto 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.header .header__top .header__logo {
+  margin-right: 3vw;
+}
+.header .header__top .header__title {
+  max-width: 10vw;
+  padding-top: 1.5vw;
+}
+.header .header__top .header__title h1 {
+  color: #282828;
+  font-family: 'MuseoSansCyrl-300', sans-serif;
+  font-size: 0.9vw;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+}
+.header .header__nav .nav {
+  max-width: 85vw;
+  margin: 0 auto;
+  padding: 1.25vw 1.5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 0.5vw;
+  background-color: #ffffff;
+}
+.header .header__nav .nav a {
+  text-decoration: none;
+  color: #282828;
+  font-family: 'MuseoSansCyrl-300', sans-serif;
+  font-size: 1vw;
+  font-weight: 400;
+}
+.header .header__nav .nav a:not(:last-child) {
+  margin-right: 1vw;
+}
+/*# sourceMappingURL=main.css.map */
