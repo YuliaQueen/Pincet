@@ -1,5 +1,5 @@
 .container {
-  width: 80vw;
+  width: 74vw;
   margin: 0 auto;
 }
 @font-face {
@@ -22,41 +22,94 @@
   font-weight: 700;
 }
 .header {
+  position: relative;
   height: 95vh;
   background-color: bisque;
-  background-image: url("../images/wave.png"), url(../images/header-bg.png);
-  background-repeat: no-repeat, no-repeat;
-  background-position: bottom, top left 43%;
-  background-size: 110%;
+  background-image: url("../images/wave.png"), url("../images/girl.png"), url(../images/header-bg.png);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: left bottom -8%, right bottom 7%, top left 43%;
+  background-size: 100%, 36%, 110%;
   padding-top: 2vh;
 }
 .header .header__top {
-  max-width: 80vw;
+  max-width: 87vw;
   margin: 0 auto 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header .header__top .header__logo {
+  max-width: 14vw;
+  margin-right: 2.6vw;
+}
+.header .header__top .header__logo img {
+  max-width: 100%;
+}
+.header .header__top .header__wrapper {
+  padding-top: 1.3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
-.header .header__top .header__logo {
-  margin-right: 3vw;
+.header .header__top .header__wrapper .header__title {
+  max-width: 8.9vw;
+  margin-right: 6vw;
 }
-.header .header__top .header__title {
-  max-width: 10vw;
-  padding-top: 1.5vw;
-}
-.header .header__top .header__title h1 {
+.header .header__top .header__wrapper .header__title h1 {
   color: #282828;
   font-family: 'MuseoSansCyrl-300', sans-serif;
-  font-size: 0.9vw;
+  font-size: 0.8vw;
   font-weight: 400;
   letter-spacing: 0.7px;
 }
+.header .header__top .header__wrapper .header_address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 3vw;
+}
+.header .header__top .header__wrapper .header_address .map-holder {
+  width: 65px;
+  height: 65px;
+  margin-right: 1vw;
+  border-radius: 50%;
+  background-image: url("../images/map-holder.png");
+  background-position: center;
+  background-size: contain;
+}
+.header .header__top .header__wrapper .header__contacts {
+  margin-right: 5vw;
+}
+.header .header__top .header__wrapper .header__btn {
+  position: relative;
+  background-color: #fefcfb;
+  border: none;
+  padding: 1vw 1.3vw 1vw 3.5vw;
+  border-radius: 2vw;
+  font-size: 1vw;
+  font-weight: 400;
+  line-height: 2vw;
+  letter-spacing: 0.05vw;
+  font-family: 'MuseoSansCyrl-500', sans-serif;
+}
+.header .header__top .header__wrapper .header__btn::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url("../images/btn-calendar.png");
+  top: 19px;
+  left: 26px;
+}
 .header .header__nav .nav {
   max-width: 85vw;
-  margin: 0 auto;
+  margin: 0 auto 3vw;
   padding: 1.25vw 1.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,5 +129,89 @@
 }
 .header .header__nav .nav a:not(:last-child) {
   margin-right: 1vw;
+}
+.header .header__content .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.header .header__content .container .header__text {
+  position: relative;
+  max-width: 50%;
+}
+.header .header__content .container .header__text::after {
+  position: absolute;
+  content: "";
+  width: 11vw;
+  height: 100%;
+  background-image: url(../images/card.png);
+  background-repeat: no-repeat;
+  bottom: -12vw;
+  right: -7vw;
+  background-size: 100%;
+}
+.header .header__content .container .header__text p {
+  margin: 0 0 1vw 0;
+  color: #282828;
+  font-family: "MuseoSansCyrl-700", sans-serif;
+  font-size: 2.2vw;
+  font-weight: 400;
+  line-height: 1.15;
+}
+.header .header__content .container .header__text .header__list {
+  margin: 0 0 1.5vw 0;
+}
+.header .header__content .container .header__text .header__list li {
+  position: relative;
+  list-style-type: none;
+}
+.header .header__content .container .header__text .header__list li::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -21px;
+  width: 0.4vw;
+  height: 0.4vw;
+  background-color: #ef9499;
+  border-radius: 50%;
+  border: 0.2vw solid white;
+}
+.header .header__content .container .header__text .header__list li:not(:last-child) {
+  margin-bottom: 1.1vw;
+}
+.header .header__content .container .header__text button {
+  position: relative;
+  text-shadow: 0 1px 5px rgba(210, 110, 116, 0.49);
+  color: #ffffff;
+  font-family: 'MuseoSansCyrl-700', sans-serif;
+  font-size: 0.8vw;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.68px;
+  border: none;
+  border-radius: 5vw;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(241, 153, 157, 0.47)), color-stop(98%, rgba(252, 182, 182, 0.99)), to(#fcb6b6));
+  background-image: linear-gradient(to top, rgba(241, 153, 157, 0.47) 0%, rgba(252, 182, 182, 0.99) 98%, #fcb6b6 100%);
+  padding: 1.5vw 7vw 1.5vw 2vw;
+}
+.header .header__content .container .header__text button::after {
+  position: absolute;
+  content: "";
+  max-width: 90%;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/branch.png");
+  background-repeat: no-repeat;
+  background-size: 85%;
+  bottom: -5px;
+  left: 12vw;
+}
+.header .header__scroll {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 /*# sourceMappingURL=main.css.map */
