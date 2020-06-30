@@ -12,6 +12,8 @@
 </head>
 <body>
 
+<div class="overlay_popup"></div>
+
 <header class="header">
 	<div class="header__top">
 		<div class="header__logo">
@@ -42,7 +44,7 @@
 				<address class="header__tel">+375 33 382 24 99</address>
 				<strong class="header__clock">Пн-Вс 9:00-21:00</strong>
 			</div>
-			<button class="header__btn">Записаться онлайн</button>
+			<button class="header__btn show_popup" rel="popup1">Записаться онлайн</button>
 		</div>
 	</div>
 	
@@ -89,6 +91,22 @@
 	</div>
 </header>
 
+<div class="popup" id="popup1">
+	<h2><strong>Получите</strong> программу обучения</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+		magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.
+	</p>
+	<form class="popup__form">
+		<select name="" id="">
+			<option>Повышение квалификации</option>
+		</select>
+		<input type="text" placeholder="Ваше имя">
+		<input type="tel" placeholder="Ваш номер телефона">
+		<button>Получить программу</button>
+	</form>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script>
@@ -99,6 +117,15 @@
 
         $('a.nav-item').hover(function () {
             $(this).toggleClass('active')
+        })
+
+        $('.show_popup').click(function() {
+            let popup_id = $('#' + $(this).attr("rel"));
+            $(popup_id).show();
+            $('.overlay_popup').show();
+        })
+        $('.overlay_popup').click(function() {
+            $('.overlay_popup, .popup').fadeOut(800);
         })
     })
 </script>
