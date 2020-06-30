@@ -436,8 +436,8 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 65px 105px;
-  max-width: 738px;
-  max-height: 669px;
+  max-width: 35vw;
+  max-height: 35vw;
   background-color: rgba(200, 96, 120, 0.5);
   border-radius: 50px;
   top: 50%;
@@ -450,14 +450,38 @@
   background-size: cover;
   z-index: 1000;
 }
-.popup h2 {
+.popup .close {
+  position: relative;
+  cursor: pointer;
+}
+.popup .close:before {
+  top: -2vw;
+  right: -4vw;
+  position: absolute;
+  content: "";
+  width: 10px;
+  border: 1px solid #8a97a1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.popup .close:after {
+  top: -2vw;
+  right: -4vw;
+  position: absolute;
+  content: "";
+  width: 10px;
+  border: 1px solid #8a97a1;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+h2 {
   margin: 0 0 23px 0;
   color: #282828;
   font-family: "MuseoSansCyrl-300", sans-serif;
   font-size: 36px;
   font-weight: 400;
 }
-.popup p {
+p {
   margin: 0 0 37px 0;
   max-width: 526px;
   color: #282828;
@@ -467,7 +491,7 @@
   letter-spacing: 0.4px;
   text-align: center;
 }
-.popup .popup__form {
+.popup__form {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,7 +502,7 @@
           flex-direction: column;
   width: 500px;
 }
-.popup .popup__form:before {
+.popup__form:before {
   content: "";
   position: absolute;
   width: 263px;
@@ -491,9 +515,9 @@
           transform: translateY(-50%);
   z-index: -1;
 }
-.popup .popup__form input,
-.popup .popup__form select,
-.popup .popup__form button {
+.popup__form input,
+.popup__form select,
+.popup__form button {
   padding: 30px 46px;
   border-radius: 40px;
   border: 1px solid #fbeeef;
@@ -502,12 +526,12 @@
   outline: none;
   font-family: "300", sans-serif;
 }
-.popup .popup__form select {
+.popup__form select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-.popup .popup__form button {
+.popup__form button {
   position: relative;
   border-radius: 35px;
   border-bottom: 2px solid rgba(200, 96, 120, 0.5);
@@ -520,7 +544,7 @@
   text-transform: uppercase;
   letter-spacing: 1.68px;
 }
-.popup .popup__form button:after {
+.popup__form button:after {
   position: absolute;
   content: "";
   width: 143px;

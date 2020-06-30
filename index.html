@@ -92,6 +92,7 @@
 </header>
 
 <div class="popup" id="popup1">
+	<div class="close"></div>
 	<h2><strong>Получите</strong> программу обучения</h2>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
 		magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -119,12 +120,16 @@
             $(this).toggleClass('active')
         })
 
-        $('.show_popup').click(function() {
+        $('.show_popup').click(function () {
             let popup_id = $('#' + $(this).attr("rel"));
             $(popup_id).show();
             $('.overlay_popup').show();
         })
-        $('.overlay_popup').click(function() {
+        $('.overlay_popup').click(function () {
+            $('.overlay_popup, .popup').fadeOut(800);
+        })
+
+        $('.close').click(function () {
             $('.overlay_popup, .popup').fadeOut(800);
         })
     })
